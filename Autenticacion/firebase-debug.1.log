@@ -1,0 +1,133 @@
+[debug] [2024-04-09T03:21:00.649Z] ----------------------------------------------------------------------
+[debug] [2024-04-09T03:21:00.652Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Alicia Ulloa\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2024-04-09T03:21:00.652Z] CLI Version:   13.7.1
+[debug] [2024-04-09T03:21:00.652Z] Platform:      win32
+[debug] [2024-04-09T03:21:00.653Z] Node Version:  v21.7.1
+[debug] [2024-04-09T03:21:00.653Z] Time:          Mon Apr 08 2024 21:21:00 GMT-0600 (hora estándar central)
+[debug] [2024-04-09T03:21:00.653Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-09T03:21:00.761Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-09T03:21:00.762Z] > authorizing via signed-in user (bonillaali1518@gmail.com)
+[debug] [2024-04-09T03:21:00.762Z] [iam] checking project hosting-dominio for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-04-09T03:21:00.768Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/hosting-dominio:testIamPermissions [none]
+[debug] [2024-04-09T03:21:00.768Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/hosting-dominio:testIamPermissions x-goog-quota-user=projects/hosting-dominio
+[debug] [2024-04-09T03:21:00.768Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hosting-dominio:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-04-09T03:21:01.147Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/hosting-dominio:testIamPermissions 200
+[debug] [2024-04-09T03:21:01.148Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hosting-dominio:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-04-09T03:21:01.150Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hosting-dominio [none]
+[debug] [2024-04-09T03:21:01.607Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hosting-dominio 200
+[debug] [2024-04-09T03:21:01.607Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hosting-dominio {"projectId":"hosting-dominio","projectNumber":"199834102944","displayName":"Hosting Dominio","name":"projects/hosting-dominio","resources":{"hostingSite":"hosting-dominio"},"state":"ACTIVE","etag":"1_d731018e-20ca-4b5e-84ef-31bca89d0823"}
+[info] 
+[info] === Deploying to 'hosting-dominio'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-04-09T03:21:01.625Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hosting-dominio/versions [none]
+[debug] [2024-04-09T03:21:01.626Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hosting-dominio/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-04-09T03:21:02.370Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hosting-dominio/versions 200
+[debug] [2024-04-09T03:21:02.370Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hosting-dominio/versions {"name":"projects/199834102944/sites/hosting-dominio/versions/f8972b0af5e52ea8","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[hosting-dominio]: beginning deploy... 
+[debug] [2024-04-09T03:21:02.449Z] Error: EPERM: operation not permitted, scandir 'C:\Users\Alicia Ulloa\OneDrive\Escritorio\Autenticacion\firebase-debug.log'
+    at Object.readdirSync (node:fs:1508:26)
+    at GlobSync._readdir (C:\Users\Alicia Ulloa\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:288:46)
+    at GlobSync._readdirInGlobStar (C:\Users\Alicia Ulloa\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:245:17)
+    at GlobSync._readdir (C:\Users\Alicia Ulloa\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:276:17)
+    at GlobSync._processReaddir (C:\Users\Alicia Ulloa\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:137:22)
+    at GlobSync._process (C:\Users\Alicia Ulloa\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:132:10)
+    at GlobSync._processGlobStar (C:\Users\Alicia Ulloa\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:380:10)
+    at GlobSync._process (C:\Users\Alicia Ulloa\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:130:10)
+    at new GlobSync (C:\Users\Alicia Ulloa\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:45:10)
+    at globSync (C:\Users\Alicia Ulloa\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:23:10)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2024-04-09T04:02:11.382Z] ----------------------------------------------------------------------
+[debug] [2024-04-09T04:02:11.385Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Alicia Ulloa\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2024-04-09T04:02:11.385Z] CLI Version:   13.7.1
+[debug] [2024-04-09T04:02:11.386Z] Platform:      win32
+[debug] [2024-04-09T04:02:11.386Z] Node Version:  v21.7.1
+[debug] [2024-04-09T04:02:11.386Z] Time:          Mon Apr 08 2024 22:02:11 GMT-0600 (hora estándar central)
+[debug] [2024-04-09T04:02:11.386Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-09T04:02:11.476Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-09T04:02:11.477Z] > authorizing via signed-in user (bonillaali1518@gmail.com)
+[debug] [2024-04-09T04:02:11.477Z] [iam] checking project hosting-dominio for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-04-09T04:02:11.479Z] > refreshing access token with scopes: []
+[debug] [2024-04-09T04:02:11.482Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-04-09T04:02:11.482Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-04-09T04:02:12.458Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-04-09T04:02:12.458Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-04-09T04:02:12.485Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/hosting-dominio:testIamPermissions [none]
+[debug] [2024-04-09T04:02:12.486Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/hosting-dominio:testIamPermissions x-goog-quota-user=projects/hosting-dominio
+[debug] [2024-04-09T04:02:12.486Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hosting-dominio:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-04-09T04:02:12.517Z] ----------------------------------------------------------------------
+[debug] [2024-04-09T04:02:12.521Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Alicia Ulloa\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2024-04-09T04:02:12.521Z] CLI Version:   13.7.1
+[debug] [2024-04-09T04:02:12.521Z] Platform:      win32
+[debug] [2024-04-09T04:02:12.521Z] Node Version:  v21.7.1
+[debug] [2024-04-09T04:02:12.521Z] Time:          Mon Apr 08 2024 22:02:12 GMT-0600 (hora estándar central)
+[debug] [2024-04-09T04:02:12.522Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-09T04:02:12.763Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-09T04:02:12.765Z] > authorizing via signed-in user (bonillaali1518@gmail.com)
+[info] i  emulators: Starting emulators: hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: hosting"}}
+[warn] !  hub: emulator hub unable to start on port 4400, starting on 4401 instead. {"metadata":{"emulator":{"name":"hub"},"message":"emulator hub unable to start on port 4400, starting on 4401 instead."}}
+[warn] !  logging: Logging Emulator unable to start on port 4500, starting on 4501 instead. {"metadata":{"emulator":{"name":"logging"},"message":"Logging Emulator unable to start on port 4500, starting on 4501 instead."}}
+[debug] [2024-04-09T04:02:12.793Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[warn] !  hosting: Hosting Emulator unable to start on port 5000, starting on 5002 instead. {"metadata":{"emulator":{"name":"hosting"},"message":"Hosting Emulator unable to start on port 5000, starting on 5002 instead."}}
+[debug] [2024-04-09T04:02:12.794Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2024-04-09T04:02:12.795Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4401},{"address":"::1","family":"IPv6","port":4401}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4501}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5002}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[warn] !  emulators: It seems that you are running multiple instances of the emulator suite for project hosting-dominio. This may result in unexpected behavior. 
+[debug] [2024-04-09T04:02:12.814Z] [hub] writing locator at C:\Users\ALICIA~1\AppData\Local\Temp\hub-hosting-dominio.json
+[debug] [2024-04-09T04:02:12.865Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/hosting-dominio/sites 
+[debug] [2024-04-09T04:02:13.963Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/hosting-dominio:testIamPermissions 200
+[debug] [2024-04-09T04:02:13.964Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/hosting-dominio:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-04-09T04:02:13.965Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hosting-dominio [none]
+[debug] [2024-04-09T04:02:14.539Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/hosting-dominio/sites 200
+[debug] [2024-04-09T04:02:14.539Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/hosting-dominio/sites {"sites":[{"name":"projects/hosting-dominio/sites/hosting-dominio","defaultUrl":"https://hosting-dominio.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2024-04-09T04:02:14.540Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hosting-dominio/webApps/-/config [none]
+[debug] [2024-04-09T04:02:15.018Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hosting-dominio 200
+[debug] [2024-04-09T04:02:15.018Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hosting-dominio {"projectId":"hosting-dominio","projectNumber":"199834102944","displayName":"Hosting Dominio","name":"projects/hosting-dominio","resources":{"hostingSite":"hosting-dominio"},"state":"ACTIVE","etag":"1_d731018e-20ca-4b5e-84ef-31bca89d0823"}
+[info] 
+[info] === Deploying to 'hosting-dominio'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2024-04-09T04:02:15.050Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hosting-dominio/versions [none]
+[debug] [2024-04-09T04:02:15.050Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hosting-dominio/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-04-09T04:02:15.602Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hosting-dominio/webApps/-/config 200
+[debug] [2024-04-09T04:02:15.602Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hosting-dominio/webApps/-/config {"projectId":"hosting-dominio","appId":"1:199834102944:web:b0b47fc78ff3dda7192dc5","storageBucket":"hosting-dominio.appspot.com","apiKey":"AIzaSyBNBlZ_rsu_TpA_mAGAOGO8ctFA00K1IdM","authDomain":"hosting-dominio.firebaseapp.com","messagingSenderId":"199834102944","measurementId":"G-XR5LJML9B7"}
+[debug] [2024-04-09T04:02:15.621Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/hosting-dominio [none]
+[debug] [2024-04-09T04:02:15.964Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/hosting-dominio 200
+[debug] [2024-04-09T04:02:15.965Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/hosting-dominio {"projectId":"hosting-dominio","projectNumber":"199834102944","displayName":"Hosting Dominio","name":"projects/hosting-dominio","resources":{"hostingSite":"hosting-dominio"},"state":"ACTIVE","etag":"1_d731018e-20ca-4b5e-84ef-31bca89d0823"}
+[info] i  hosting[hosting-dominio]: Serving hosting files from: ./ {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1m./\u001b[22m"}}
+[info] +  hosting[hosting-dominio]: Local server: http://127.0.0.1:5002 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5002\u001b[22m\u001b[24m"}}
+[warn] !  emulators: The Emulator UI is not starting, either because none of the running emulators have a UI component or the Emulator UI cannot determine the Project ID. Pass the --project flag to specify a project. {"metadata":{"emulator":{"name":"hub"},"message":"The Emulator UI is not starting, either because none of the running emulators have a UI component or the Emulator UI cannot determine the Project ID. Pass the --project flag to specify a project."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+└─────────────────────────────────────────────────────────────┘
+
+┌──────────┬────────────────┐
+│ Emulator │ Host:Port      │
+├──────────┼────────────────┤
+│ Hosting  │ 127.0.0.1:5002 │
+└──────────┴────────────────┘
+  Emulator Hub running at 127.0.0.1:4401
+  Other reserved ports: 4501
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2024-04-09T04:02:16.804Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hosting-dominio/versions 200
+[debug] [2024-04-09T04:02:16.804Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/hosting-dominio/versions {"name":"projects/199834102944/sites/hosting-dominio/versions/a0fa91ca812242ee","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[hosting-dominio]: beginning deploy... 
+[debug] [2024-04-09T04:02:16.987Z] Error: EPERM: operation not permitted, scandir 'C:\Users\Alicia Ulloa\OneDrive\Escritorio\Autenticacion\firebase-debug.log'
+    at Object.readdirSync (node:fs:1508:26)
+    at GlobSync._readdir (C:\Users\Alicia Ulloa\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:288:46)
+    at GlobSync._readdirInGlobStar (C:\Users\Alicia Ulloa\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:245:17)
+    at GlobSync._readdir (C:\Users\Alicia Ulloa\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:276:17)
+    at GlobSync._processReaddir (C:\Users\Alicia Ulloa\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:137:22)
+    at GlobSync._process (C:\Users\Alicia Ulloa\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:132:10)
+    at GlobSync._processGlobStar (C:\Users\Alicia Ulloa\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:380:10)
+    at GlobSync._process (C:\Users\Alicia Ulloa\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:130:10)
+    at new GlobSync (C:\Users\Alicia Ulloa\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:45:10)
+    at globSync (C:\Users\Alicia Ulloa\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:23:10)
+[error] 
+[error] Error: An unexpected error has occurred.
